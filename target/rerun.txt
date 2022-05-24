@@ -1,0 +1,1 @@
+file:src/main/resources/Features/6-Slider.feature:3:9

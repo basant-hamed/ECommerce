@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="14" time="348.826">
+<testcase classname="Register" name="Valid Registration" time="43.597">
+<system-out><![CDATA[When user navigates to website url..........................................passed
+And Click on Register Tab...................................................passed
+And select gender option....................................................passed
+And user enters "Passant" as a first name, "Hamed" as a last name, "Passant@Hamed.com" as an email.passed
+And Select Day, Month and Year..............................................passed
+And fill "Google" as company name...........................................passed
+And fill "123456" as a password and "123456" as a confirm password..........passed
+And clicks on Register......................................................passed
+Then user could successfully register.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="Valid Login" time="21.416">
+<system-out><![CDATA[When user navigates to website url..........................................passed
+And clicks on Login tab.....................................................passed
+And user enters "Passant@Hamed.com" as an email and "123456" as a password..passed
+And clicks on Login.........................................................passed
+Then user could successfully logged in......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Switch Currency" name="Valid Switch" time="21.676">
+<system-out><![CDATA[When user navigates to website url..........................................passed
+And switch to Euro..........................................................passed
+Then Euro should be selected................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Category Selection" name="Valid Category Selection" time="17.678">
+<system-out><![CDATA[When user navigates to website url..........................................passed
+And user hovers on Computers category.......................................passed
+And clicks on Notebooks.....................................................passed
+Then user should be directed to Notebooks page..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Searching" name="Search by Product Name" time="17.526">
+<system-out><![CDATA[When user navigates to website url..........................................passed
+And inputs "Lumia" as a product Name on search field........................passed
+And hits Enter..............................................................passed
+Then product should be displayed............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Searching" name="Search by Product SKU" time="19.1">
+<system-out><![CDATA[When user navigates to website url..........................................passed
+And inputs "N_1020_LU" as a product SKU on search field.....................passed
+And hits Enter..............................................................passed
+Then product should be displayed............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="SliderWrapper is Clickable" name="user could click on Nokia on slider" time="21.287">
+<failure message="expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user navigates to website url..........................................passed
+And Nokia Slide is clicked on...............................................passed
+Then Nokia page should be opened............................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at Steps.SliderWrapper.NokiaPageOpen(SliderWrapper.java:35)
+	at ✽.Nokia page should be opened(file:///D:/MyWork/Udacity/2nd_Project_Automation/Ecommerce_project/src/main/resources/Features/6-Slider.feature:6)
+]]></failure>
+</testcase>
+<testcase classname="SliderWrapper is Clickable" name="user could click on Iphone on slider" time="26.09">
+<failure message="expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user navigates to website url..........................................passed
+And Iphone Slide is clicked on..............................................passed
+Then Iphone page should be opened...........................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at Steps.SliderWrapper.IphonePageOpen(SliderWrapper.java:42)
+	at ✽.Iphone page should be opened(file:///D:/MyWork/Udacity/2nd_Project_Automation/Ecommerce_project/src/main/resources/Features/6-Slider.feature:12)
+]]></failure>
+</testcase>
+<testcase classname="User should open followsUs links" name="user opens Facebook link" time="19.601">
+<system-out><![CDATA[When user navigates to website url..........................................passed
+And user opens Facebook link................................................passed
+Then Facebook Page is opened in new tab.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User should open followsUs links" name="user opens Twitter link" time="22.259">
+<system-out><![CDATA[When user navigates to website url..........................................passed
+And user opens Twitter link.................................................passed
+Then Twitter Page is opened in new tab......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User should open followsUs links" name="user opens RSS link" time="17.061">
+<system-out><![CDATA[When user navigates to website url..........................................passed
+And user opens rss link.....................................................passed
+Then News RSS is opened.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User should open followsUs links" name="user opens YouTube link" time="39.867">
+<system-out><![CDATA[When user navigates to website url..........................................passed
+And user opens YouTube link.................................................passed
+Then YouTube Channel is opened in new tab...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could add items to wishlist" name="user could add HTC ONE M8 phone to wishlist" time="30.257">
+<system-out><![CDATA[When user navigates to website url..........................................passed
+And clicks on wishlist icon under HTC ONE M8 phone..........................passed
+Then Notification success message should be displayed.......................passed
+And Notification success message color is green.............................passed
+And HTC ONE M8 phone should be added to WishList Page.......................passed
+And when add more of the item, the count increased..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could add items to Shopping Cart" name="user could add HTC ONE M8 phone to Shopping Cart" time="29.293">
+<system-out><![CDATA[When user navigates to website url..........................................passed
+And clicks on ADD TO CART under HTC ONE M8 phone............................passed
+Then Notification success message for adding should be displayed............passed
+And Notification success message for adding color is green..................passed
+And HTC ONE M8 phone should be added to Shopping Cart Page..................passed
+And when add more of the same item to shopping cart, the count increased....passed
+]]></system-out>
+</testcase>
+</testsuite>

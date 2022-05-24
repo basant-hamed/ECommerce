@@ -1,0 +1,14 @@
+Steps\ShoppingCart.class
+Steps\SwitchCurrency.class
+Steps\FollowUs.class
+Pages\HomePage.class
+Steps\Category.class
+Steps\Register.class
+Steps\Login.class
+Steps\SliderWrapper.class
+Steps\Searching.class
+TestRunner\TestRunner.class
+Pages\RegistrationPage.class
+Steps\WishList.class
+Pages\LoginPage.class
+Steps\Hook.class
